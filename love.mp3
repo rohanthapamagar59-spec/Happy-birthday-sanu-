@@ -1,0 +1,11 @@
+<audio id="music" loop>
+    <source src="love.mp3" type="audio/mp3">
+</audio>
+
+<button onclick="playMusic()">🎵 Play Music</button>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+</script>
