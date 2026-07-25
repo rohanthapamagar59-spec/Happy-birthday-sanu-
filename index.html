@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sanu 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="pin-screen">
+        <h1>🎂 A Special Surprise For You 💗</h1>
+        <p>Enter the Secret PIN</p>
+
+        <input type="password" id="pin" placeholder="Enter PIN">
+        <br><br>
+
+        <button onclick="checkPin()">Unlock 💗</button>
+
+        <p id="message"></p>
+    </div>
+
+    <div id="music-screen" style="display:none;">
+        <h2>🎵 Choose Your Music</h2>
+
+        <button onclick="selectMusic('music1.mp3')">Happy Birthday</button>
+        <button onclick="selectMusic('music2.mp3')">Romantic</button>
+        <button onclick="selectMusic('music3.mp3')">Lo-Fi</button>
+
+        <br><br>
+
+        <button onclick="continuePage()">Continue ➜</button>
+    </div>
+
+    <audio id="bgMusic"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
