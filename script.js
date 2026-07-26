@@ -1,23 +1,56 @@
-function checkPin() {
-    const pin = document.getElementById("pin").value;
+<!-- SURPRISE MENU -->
+<div id="menu-screen" style="display:none;">
 
-    if (pin === "0516") {
-        document.getElementById("pin-screen").style.display = "none";
-        document.getElementById("music-screen").style.display = "block";
-    } else {
-        document.getElementById("message").innerHTML = "❌ Wrong PIN! Try Again 😛";
-    }
-}
+    <h1>🎁 Choose Your Surprise 💗</h1>
 
-function selectMusic(song) {
-    const music = document.getElementById("bgMusic");
+    <button onclick="showWish()">
+        💌 Amazing Wish
+    </button>
 
-    music.src = song;
-    music.play();
+    <button onclick="showLove()">
+        ❤️ I Love You
+    </button>
 
-    alert("🎵 Music Selected!");
-}
+    <button onclick="showCake()">
+        🎂 Birthday Cake
+    </button>
 
-function continuePage() {
-    alert("💗 Hearts Animation Coming Next...");
-}
+    <button onclick="showGallery()">
+        📸 Memories
+    </button>
+
+</div>
+
+<!-- AMAZING WISH -->
+<div id="wish-screen" style="display:none;">
+
+<h1>💗 Happy Birthday Sanu 💗</h1>
+
+<p>
+May your smile always stay beautiful,
+your dreams come true,
+and your life be filled with happiness forever. 🌸
+</p>
+
+<button onclick="openMenu()">
+⬅ Back
+</button>
+
+</div>
+
+<!-- LOVE PAGE -->
+
+<div id="love-screen" style="display:none;">
+
+<h1>I Love You ❤️</h1>
+
+<button onclick="loveYes()">
+YES 💗
+</button>
+
+<button id="noBtn"
+onmouseover="moveNoButton()">
+NO 😛
+</button>
+
+</div>
