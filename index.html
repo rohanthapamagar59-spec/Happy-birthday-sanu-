@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Sanu 💗</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sanu 💗</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="pin-screen">
-        <h1>🎂 A Special Surprise For You 💗</h1>
-        <p>Enter the Secret PIN</p>
+<!-- PIN SCREEN -->
+<div id="pin-screen">
+    <h1>🎂 Happy Birthday Sanu 💗</h1>
+    <p>Enter Your Secret PIN</p>
 
-        <input type="password" id="pin" placeholder="Enter PIN">
-        <br><br>
+    <input type="password" id="pin" placeholder="Enter PIN">
 
-        <button onclick="checkPin()">Unlock 💗</button>
+    <br><br>
 
-        <p id="message"></p>
-    </div>
+    <button onclick="checkPin()">Unlock 💗</button>
 
-    <div id="music-screen" style="display:none;">
-        <h2>🎵 Choose Your Music</h2>
+    <p id="message"></p>
+</div>
 
-        <button onclick="selectMusic('music1.mp3')">Happy Birthday</button>
-        <button onclick="selectMusic('music2.mp3')">Romantic</button>
-        <button onclick="selectMusic('music3.mp3')">Lo-Fi</button>
+<!-- MUSIC SCREEN -->
+<div id="music-screen" style="display:none;">
 
-        <br><br>
+<h2>🎵 Choose Your Favourite Music</h2>
 
-        <button onclick="continuePage()">Continue ➜</button>
-    </div>
+<button onclick="selectMusic('music1.mp3')">
+🎂 Happy Birthday
+</button>
 
-    <audio id="bgMusic"></audio>
+<button onclick="selectMusic('music2.mp3')">
+💗 Romantic
+</button>
 
-    <script src="script.js"></script>
+<button onclick="selectMusic('music3.mp3')">
+🌸 Lo-Fi
+</button>
+
+<br><br>
+
+<button onclick="continuePage()">
+Continue ➜
+</button>
+
+</div>
+
+<!-- HEARTS PAGE -->
+<div id="heart-screen" style="display:none;">
+
+<h1>💗 Welcome Sanu 💗</h1>
+
+<p>
+A beautiful surprise is waiting for you...
+</p>
+
+<div class="hearts">
+❤️ 💖 💕 💗 💞 💘
+</div>
+
+<br>
+
+<button onclick="openMenu()">
+Open Surprise 🎁
+</button>
+
+</div>
+
+<audio id="bgMusic"></audio>
+
+<script src="script.js"></script>
 
 </body>
 </html>
