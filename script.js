@@ -1,56 +1,61 @@
-<!-- SURPRISE MENU -->
-<div id="menu-screen" style="display:none;">
+// ===== PIN =====
+function checkPin() {
+    let pin = document.getElementById("pin").value;
 
-    <h1>🎁 Choose Your Surprise 💗</h1>
+    if (pin === "0516") {
+        document.getElementById("pin-screen").style.display = "none";
+        document.getElementById("music-screen").style.display = "block";
+    } else {
+        document.getElementById("message").innerHTML = "❌ Wrong PIN";
+    }
+}
 
-    <button onclick="showWish()">
-        💌 Amazing Wish
-    </button>
+// ===== MUSIC =====
+function selectMusic(song) {
+    let music = document.getElementById("bgMusic");
+    music.src = song;
+    music.play();
+}
 
-    <button onclick="showLove()">
-        ❤️ I Love You
-    </button>
+function continuePage() {
+    document.getElementById("music-screen").style.display = "none";
+    document.getElementById("heart-screen").style.display = "block";
+}
 
-    <button onclick="showCake()">
-        🎂 Birthday Cake
-    </button>
+// ===== MENU =====
+function openMenu() {
+    document.getElementById("heart-screen").style.display = "none";
+    document.getElementById("menu-screen").style.display = "block";
+}
 
-    <button onclick="showGallery()">
-        📸 Memories
-    </button>
+function showWish() {
+    document.getElementById("menu-screen").style.display = "none";
+    document.getElementById("wish-screen").style.display = "block";
+}
 
-</div>
+function showLove() {
+    document.getElementById("menu-screen").style.display = "none";
+    document.getElementById("love-screen").style.display = "block";
+}
 
-<!-- AMAZING WISH -->
-<div id="wish-screen" style="display:none;">
+function showCake() {
+    alert("🎂 Cake Animation Coming Soon!");
+}
 
-<h1>💗 Happy Birthday Sanu 💗</h1>
+function showGallery() {
+    alert("📸 Gallery Coming Soon!");
+}
 
-<p>
-May your smile always stay beautiful,
-your dreams come true,
-and your life be filled with happiness forever. 🌸
-</p>
+// ===== LOVE =====
+function loveYes() {
+    alert("💗 I Love You Forever 💗");
+}
 
-<button onclick="openMenu()">
-⬅ Back
-</button>
+// ===== NO BUTTON =====
+function moveNoButton() {
+    let btn = document.getElementById("noBtn");
 
-</div>
-
-<!-- LOVE PAGE -->
-
-<div id="love-screen" style="display:none;">
-
-<h1>I Love You ❤️</h1>
-
-<button onclick="loveYes()">
-YES 💗
-</button>
-
-<button id="noBtn"
-onmouseover="moveNoButton()">
-NO 😛
-</button>
-
-</div>
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 250 + "px";
+    btn.style.top = Math.random() * 400 + "px";
+}
